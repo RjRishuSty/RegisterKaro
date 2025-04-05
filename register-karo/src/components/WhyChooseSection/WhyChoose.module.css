@@ -1,0 +1,70 @@
+.background {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    background-color: #00bcd4;
+    animation: floatCircle 20s linear infinite;
+  }
+  
+  @keyframes floatCircle {
+    0% {
+      transform: translateY(100vh) scale(1);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-200px) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  /* Individual circle styles */
+  .circle1 {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+  
+  .circle2 {
+    width: 100px;
+    height: 100px;
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 22s;
+  }
+  
+  .circle3 {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    animation-delay: 4s;
+    animation-duration: 16s;
+  }
+  
+  .circle4 {
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    animation-delay: 1s;
+    animation-duration: 24s;
+  }
+  
+  .circle5 {
+    width: 70px;
+    height: 70px;
+    left: 85%;
+    animation-delay: 3s;
+    animation-duration: 20s;
+  }
+  

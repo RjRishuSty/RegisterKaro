@@ -1,0 +1,30 @@
+.background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #fdfdfd;
+    overflow: hidden;
+  }
+  
+  .blob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #90caf9;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: blobMove 8s ease-in-out infinite;
+    top: 30%;
+    left: 40%;
+  }
+  
+  @keyframes blobMove {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(50px, -80px) scale(1.3);
+    }
+  }
+  
