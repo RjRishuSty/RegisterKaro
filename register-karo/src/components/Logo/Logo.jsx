@@ -3,7 +3,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 
 const Logo = ({ useIn }) => {
-  const xSmall = useMediaQuery("(max-width:900px)");
+  const isMobile = useMediaQuery("(max-width:900px)");
   return (
     <Box
       component="div"
@@ -18,14 +18,14 @@ const Logo = ({ useIn }) => {
         <img
           src={logo}
           alt="RegisterKaro"
-          style={{ width: "auto", height: xSmall ? 50 : 60 }}
+          style={{ width: "auto", height: isMobile ? 50 : 60 }}
         />
       )}
       <Typography
         component="div"
         sx={{
-          ml: xSmall ? -0.7 : useIn === "header" ? -1 : "",
-          fontSize: xSmall ? 25 : 30,
+          ml: isMobile ? "" : useIn === "header" ? -1 : "",
+          fontSize: isMobile ? 25 : 30,
           fontWeight: 700,
           color: "text.primary",
         }}
@@ -34,7 +34,7 @@ const Logo = ({ useIn }) => {
         <Typography
           component="span"
           sx={{
-            fontSize: xSmall ? 25 :30,
+            fontSize: isMobile ? 25 :30,
             fontWeight: 700,
             color: "text.secondary",
           }}

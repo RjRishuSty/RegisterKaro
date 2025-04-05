@@ -17,4 +17,29 @@ export const theme = createTheme({
   typography: {
     fontFamily: '"Kumbh Sans", sans-serif',
   },
+  components: {
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: "#000", // default label color
+
+          "&.Mui-focused": {
+            color: "#000", // label color on focus
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          borderColor: "#000", // default border color
+        },
+        root: {
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#000", // border color on focus
+          },
+        },
+      },
+    },
+  },
 });

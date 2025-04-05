@@ -6,7 +6,7 @@ import StartIcon from "@mui/icons-material/Start";
 
 const Hero = () => {
   return (
-    <Stack component='section' sx={{mt:5,py:10}}>
+    <Stack component='section' sx={{mt:5,py:10,backgroundColor:'#f9f7fd'}}>
       <Container sx={{}}>
         <Grid
           container

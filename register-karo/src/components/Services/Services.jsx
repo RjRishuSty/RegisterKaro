@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import CardSwiper from "../CardSwiper/CardSwiper";
 import ApartmentIcon from "@mui/icons-material/Apartment";
@@ -9,6 +9,8 @@ import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 const Services = () => {
+  const isMobile = useMediaQuery("(max-width:900px)");
+
   const data = [
     { id: "1", name: "Company Formation", icon: <ApartmentIcon /> },
     {
@@ -36,20 +38,34 @@ const Services = () => {
     },
   ];
   return (
-    <Stack component="section" sx={{ border: "2px solid red", py: 5 }}>
-      <Typography
-        sx={{
-          fontSize: "3rem",
-          textAlign: "center",
-          color: "text.secondary",
-          textTransform:'uppercase',
-          fontWeight: 700,
-          mb:3
-        }}
-      >
-        Our Services
-      </Typography>
-      <CardSwiper data={data} useIn="service" />
+    <Stack component="section" sx={{ padding:'5rem 5px'}}>
+      <Grid container sx={{justifyContent:'center',alignItems:'center'}}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{justifyContent:'center',alignItems:'center'}}>
+          <Typography
+            sx={{
+              fontSize: isMobile ? "2rem" : "3rem",
+              textAlign: "center",
+              color: "text.secondary",
+              textTransform: "uppercase",
+              fontWeight: 700,
+            }}
+          >
+            Our Services
+          </Typography>
+        </Grid>
+        <Grid size={{ xs: 12, sm: 12, md: 6 }} sx={{justifyContent:'center',alignItems:'center',padding:'0px 10px'}}>
+          <Typography sx={{color:'gray', fontSize:'0.9rem',textAlign:'center'}}>
+            At RegisterKaro, we simplify the complexities of business compliance
+            and registrations, making it easier for you to focus on growth.
+            Backed by a team of seasoned professionals and legal experts, we
+            offer fast, affordable, and reliable services tailored to startups,
+            SMEs, and established enterprises.
+          </Typography>
+        </Grid>
+        <Grid size={{xs:12,sm:12,md:12}} sx={{justifyContent:'center',alignItems:'center',mt:3}}>
+        <CardSwiper data={data} useIn="service" />
+        </Grid>
+      </Grid>
     </Stack>
   );
 };
